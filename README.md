@@ -3,8 +3,9 @@
 
 [![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
 
+Ionic 4 Angular 8 Capacitor plugin for generating video quality for android.
 
-By using capacitor, i have created a plugin that will take a youtube link and via capacitor bridge and andorid plugins it will fetch youtube qualities which can be used in your player to play live/recorded videos.
+By using capacitor, I have created a plugin that will take a youtube link and via capacitor bridge and andorid plugins it will fetch youtube qualities which can be used in your player to play live/recorded videos.
 
 - ✨Magic ✨
 
