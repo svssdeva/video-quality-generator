@@ -11,6 +11,10 @@ export class DevaYoutubeGeneratorWeb extends WebPlugin implements DevaYoutubeGen
   getDataFromLink(options: { link: string; isLive: boolean }): Promise<{ data: any }> {
     return Promise.resolve({ data: options });
   }
+
+  async setPlayerData(options: { videoData: string; userData: string; token: string }): Promise<{ videoData: string; userData: string; token: string }> {
+    return options;
+  }
 }
 
 const DevaYoutubeGenerator = new DevaYoutubeGeneratorWeb();

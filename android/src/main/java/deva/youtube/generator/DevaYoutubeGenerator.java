@@ -19,6 +19,13 @@ import java.util.Comparator;
 public class DevaYoutubeGenerator extends Plugin {
 
     @PluginMethod
+    public void setPlayerData(PluginCall call) {
+        String videoData = call.getString("videoData");
+        String userData = call.getString("userData");
+        String token = call.getString("token");
+    }
+
+    @PluginMethod
     public void getDataFromLink(PluginCall call) {
 
         String value = call.getString("link");
