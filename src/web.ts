@@ -12,7 +12,7 @@ export class DevaYoutubeGeneratorWeb extends WebPlugin implements DevaYoutubeGen
     return Promise.resolve({ data: options });
   }
 
-  async setPlayerData(options: { videoData: string; userData: string; token: string }): Promise<{ videoData: string; userData: string; token: string }> {
+  async setPlayerData(options: { videoData: string; userData: string; token: string, responseHeaders: string, extraData: string }): Promise<{ videoData: string; userData: string; token: string,  responseHeaders: string, extraData: string }> {
     return options;
   }
 }

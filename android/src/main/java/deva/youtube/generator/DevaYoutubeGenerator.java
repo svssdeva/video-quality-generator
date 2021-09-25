@@ -23,6 +23,8 @@ public class DevaYoutubeGenerator extends Plugin {
         String videoData = call.getString("videoData");
         String userData = call.getString("userData");
         String token = call.getString("token");
+        String responseHeaders = call.getString("responseHeaders");
+        String extraData = call.getString("extraData");
     }
 
     @PluginMethod
