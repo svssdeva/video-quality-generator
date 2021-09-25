@@ -1,6 +1,6 @@
 {
   "name": "youtube-quality-generator-deva",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "youtube quality generator for capacitor android ionic 4",
   "main": "dist/plugin.js",
   "module": "dist/esm/index.js",
