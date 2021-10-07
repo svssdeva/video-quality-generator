@@ -8,6 +8,7 @@ buildscript {
     repositories {
         google()
         jcenter()
+        mavenLocal()
         maven { url "https://jitpack.io" }
     }
     dependencies {
@@ -41,10 +42,8 @@ repositories {
     google()
     jcenter()
     mavenCentral()
+    mavenLocal()
     maven { url "https://jitpack.io" }
-    flatDir {
-        dirs 'libs'
-    }
 }
 
 
@@ -55,10 +54,10 @@ dependencies {
     testImplementation "junit:junit:$junitVersion"
     androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"
-    implementation(name:'nativeplayer-debug', ext:'aar')
+
     implementation 'com.github.evgenyneu:js-evaluator-for-android:v5.0.0'
     implementation 'com.github.ExCiteS:apache-commons-codec-shaded:1.11'
     implementation 'com.google.code.gson:gson:2.8.6'
-    implementation 'com.google.android.exoplayer:exoplayer:2.11.1'
-    implementation 'com.github.kotvertolet:youtube-jextractor:0.3.3'
+
+    implementation 'co.pw.lib.nativeplayer:1.0.0'
 }
