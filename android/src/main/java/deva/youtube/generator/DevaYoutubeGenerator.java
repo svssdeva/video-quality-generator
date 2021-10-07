@@ -25,6 +25,13 @@ public class DevaYoutubeGenerator extends Plugin {
         String token = call.getString("token");
         String responseHeaders = call.getString("responseHeaders");
         String extraData = call.getString("extraData");
+
+        NetworkManager networkManager = new NetworkManager(getContext());
+        networkManager.getLoginManager().setAPIToken(token);
+        Object response = videoData;
+        NativePlayerModal nativePlayerModal = new Gson().fromJson(extraData, NativePlayerModal.class);
+        NativePlayer.playVideo(getContext(),response,nativePlayerModal);
+
     }
 
     @PluginMethod
