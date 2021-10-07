@@ -39,11 +39,12 @@ android {
 }
 
 repositories {
+
     google()
-    jcenter()
     mavenCentral()
     mavenLocal()
     maven { url "https://jitpack.io" }
+    jcenter()
 }
 
 
@@ -59,5 +60,5 @@ dependencies {
     implementation 'com.github.ExCiteS:apache-commons-codec-shaded:1.11'
     implementation 'com.google.code.gson:gson:2.8.6'
 
-    implementation 'co.pw.lib.nativeplayer:1.0.0'
+    implementation 'co.pw.lib:nativePlayer:1.0.0'
 }

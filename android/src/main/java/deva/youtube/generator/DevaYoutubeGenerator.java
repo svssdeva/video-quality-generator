@@ -10,6 +10,10 @@ import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
 import com.google.gson.Gson;
+import com.pw.nativeplayer.NativePlayerModal;
+import com.pw.nativeplayer.modals.BatchCredential;
+import com.pw.nativeplayer.utils.NativePlayer;
+import com.pw.nativeplayer.utils.NetworkManager;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -30,7 +34,7 @@ public class DevaYoutubeGenerator extends Plugin {
         networkManager.getLoginManager().setAPIToken(token);
         Object response = videoData;
         NativePlayerModal nativePlayerModal = new Gson().fromJson(extraData, NativePlayerModal.class);
-        NativePlayer.playVideo(getContext(),response,nativePlayerModal);
+        NativePlayer.playVideo(getContex(),response,nativePlayerModal);
 
     }
 
