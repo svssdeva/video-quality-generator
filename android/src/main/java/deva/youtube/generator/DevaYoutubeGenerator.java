@@ -14,6 +14,7 @@ import com.google.gson.Gson;
 import com.pw.nativeplayer.NativePlayerModal;
 import com.pw.nativeplayer.modals.BatchCredential;
 import com.pw.nativeplayer.response.BatchData;
+import com.pw.nativeplayer.response.BatchTopicContentData;
 import com.pw.nativeplayer.response.CourseContentData;
 import com.pw.nativeplayer.response.DemoVideosData;
 import com.pw.nativeplayer.response.DoubtData;
@@ -29,6 +30,7 @@ import com.pw.nativeplayer.response.VideoBookmarkData;
 import com.pw.nativeplayer.response.VideoDetails;
 import com.pw.nativeplayer.utils.NativePlayer;
 import com.pw.nativeplayer.utils.NetworkManager;
+import com.pw.nativeplayer.utils.ResponseMapper;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -113,7 +115,11 @@ public class DevaYoutubeGenerator extends Plugin {
                 NativePlayer.playVideo(getContext(),todayClassesData,nativePlayerModal);
                 break;
             }
-
+            case ResponseMapper.BATCH_TOPIC_CONTENT_DATA: {
+               BatchTopicContentData batchTopicContentData = new Gson().fromJson(videoData, BatchTopicContentData.class);
+                NativePlayer.playVideo(getContext(),batchTopicContentData,nativePlayerModal);
+                break;
+            }
             case ResponseMapper.DEMO_VIDEOS_DATA: {
                 DemoVideosData demoVideosData = new Gson().fromJson(videoData, DemoVideosData.class);
                 NativePlayer.playVideo(getContext(),demoVideosData,nativePlayerModal);
